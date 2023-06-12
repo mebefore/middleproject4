@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import co.shop.cart.command.cart;
 import co.shop.common.Command;
 import co.shop.main.command.MainCommand;
 import co.shop.member.command.Login;
@@ -39,6 +40,7 @@ public class FrontController extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		map.put("/main.do", new MainCommand());
 		map.put("/login.do", new Login());
+		map.put("/cart.do", new cart());
 	}
 
 	/**
